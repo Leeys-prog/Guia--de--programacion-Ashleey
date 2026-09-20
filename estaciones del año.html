@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estaciones del Año</title>
+</head>
+<body>
+
+    <h2>Estación del Año☁️</h2>
+
+    <select id="mes">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+
+    <button onclick="mostrarEstacion()">Ver estación</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarEstacion() {
+            let mes = Number(document.getElementById("mes").value);
+            let estacion = "";
+
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    estacion = "Invierno";
+                    break;
+
+                case 3:
+                case 4:
+                case 5:
+                    estacion = "Primavera";
+                    break;
+
+                case 6:
+                case 7:
+                case 8:
+                    estacion = "Verano";
+                    break;
+
+                case 9:
+                case 10:
+                case 11:
+                    estacion = "Otoño";
+                    break;
+            }
+
+            document.getElementById("resultado").innerHTML =
+                "Estación: " + estacion;
+        }
+    </script>
+
+</body>
+</html>

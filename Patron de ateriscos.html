@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patron de asteriscos</title>
+</head>
+<body>
+
+    <h2>Patron de asteriscos</h2>
+
+    <input type="number" id="filas" placeholder="Cantidad de filas">
+
+    <button onclick="generar()">Mostrar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function generar() {
+
+            let filas = Number(document.getElementById("filas").value);
+            let resultado = "";
+
+            for (let i = 1; i <= filas; i++) {
+
+                for (let j = 1; j <= i; j++) {
+                    resultado += "*";
+                }
+
+                resultado += "<br>";
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>

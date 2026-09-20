@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {
+    font-family: Arial;
+    background: #f8f4ef;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.contenedor {
+    background: white;
+    width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #bbb;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+button {
+    padding: 10px 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #8d6e63;
+    color: white;
+}
+
+li {
+    list-style: none;
+    background: #f1ece8;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 6px;
+}
+</style>
+    <title>Tabla de multiplicar</title>
+</head>
+<body>
+
+    <h2>Tabla de multiplicar</h2>
+
+    <input type="number" id="numero" placeholder="Ingrese un numero">
+
+    <button onclick="generar()">Mostrar tabla</button>
+
+    <ul id="resultado"></ul>
+
+    <script>
+        function generar() {
+
+            let numero = Number(document.getElementById("numero").value);
+            let resultado = "";
+
+            for (let i = 1; i <= 10; i++) {
+
+                resultado += "<li>" + numero + " x " + i +
+                    " = " + (numero * i) + "</li>";
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {
+    font-family: Arial;
+    background: #eef3f2;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.contenedor {
+    background: white;
+    width: 380px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px #aaa;
+}
+
+input, select {
+    padding: 10px;
+    margin: 8px;
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 22px;
+    margin-top: 10px;
+    background: #546e7a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+</style>
+    <title>Convertir de Moneda</title>
+</head>
+<body>
+
+    <h2>Convertir moneda</h2>
+
+    <input type="number" id="cantidad" placeholder="Ingrese cantidad">
+
+    <select id="moneda">
+        <option value="dolar">Dolares</option>
+        <option value="euro">Euros</option>
+        <option value="lempira">Lempiras</option>
+    </select>
+
+    <button onclick="convertir()">Convertir</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function convertir() {
+
+            let cantidad = Number(document.getElementById("cantidad").value);
+            let moneda = document.getElementById("moneda").value;
+            let resultado = 0;
+
+            switch (moneda) {
+
+                case "dolar":
+                    resultado = cantidad * 26;
+                    document.getElementById("resultado").innerHTML =
+                        "En lempiras: L. " + resultado.toFixed(2);
+                    break;
+
+                case "euro":
+                    resultado = cantidad * 30;
+                    document.getElementById("resultado").innerHTML =
+                        "En lempiras: L. " + resultado.toFixed(2);
+                    break;
+
+                case "lempira":
+                    resultado = cantidad / 26;
+                    document.getElementById("resultado").innerHTML =
+                        "En dolares: $ " + resultado.toFixed(2);
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Da de la Semana</title>
+</head>
+<body>
+
+    <h2>Día de la Semana</h2>
+
+    <input type="number" id="dia" placeholder="Número del 1 al 7">
+    <button onclick="mostrarDia()">Mostrar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarDia() {
+            let dia = Number(document.getElementById("dia").value);
+            let resultado = "";
+
+            switch (dia) {
+                case 1:
+                    resultado = "Lunes";
+                    break;
+                case 2:
+                    resultado = "Martes";
+                    break;
+                case 3:
+                    resultado = "Miércoles";
+                    break;
+                case 4:
+                    resultado = "Jueves";
+                    break;
+                case 5:
+                    resultado = "Viernes";
+                    break;
+                case 6:
+                    resultado = "Sábado";
+                    break;
+                case 7:
+                    resultado = "Domingo";
+                    break;
+                default:
+                    resultado = "Número fuera de rango";
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>

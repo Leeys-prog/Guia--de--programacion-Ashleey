@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluar promedio</title>
+</head>
+<body>
+
+    <h2>Evaluacion de promedio</h2>
+
+    <input type="number" id="nota" placeholder="Ingresar la nota">
+    <button onclick="evaluar()">Evaluar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function evaluar() {
+            let nota = Number(document.getElementById("nota").value);
+            let resultado = document.getElementById("resultado");
+
+            if (nota >= 70) {
+                resultado.innerHTML = "Aprobado ;)";
+                resultado.style.color = "green";
+            } else {
+                resultado.innerHTML = "Reprobado:(";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

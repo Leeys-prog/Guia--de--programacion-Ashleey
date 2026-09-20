@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarifa de peaje</title>
+</head>
+<body>
+
+    <h2>Tarifa de peaje</h2>
+
+    <select id="vehiculo">
+        <option value="moto">Moto</option>
+        <option value="auto">Auto</option>
+        <option value="autobus">Autobus</option>
+        <option value="camion">Camion</option>
+    </select>
+
+    <button onclick="calcular()">Calcular tarifa</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+
+            let vehiculo = document.getElementById("vehiculo").value;
+            let tarifa = 0;
+
+            switch (vehiculo) {
+
+                case "moto":
+                    tarifa = 20;
+                    break;
+
+                case "auto":
+                    tarifa = 40;
+                    break;
+
+                case "autobus":
+                    tarifa = 80;
+                    break;
+
+                case "camion":
+                    tarifa = 100;
+                    break;
+            }
+
+            document.getElementById("resultado").innerHTML =
+                "Tarifa: L. " + tarifa;
+        }
+    </script>
+
+</body>
+</html>

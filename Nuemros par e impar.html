@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Par o Impar</title>
+</head>
+<body>
+
+    <h2>Número Par o Impar</h2>
+
+    <input type="number" id="numero" placeholder="Ingrese un número">
+    <button onclick="comprobar()">Comprobar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function comprobar() {
+            let numero = Number(document.getElementById("numero").value);
+
+            if (numero % 2 == 0) {
+                document.getElementById("resultado").innerHTML = "El número es par";
+            } else {
+                document.getElementById("resultado").innerHTML = "El número es impar";
+            }
+        }
+    </script>
+
+</body>
+</html>

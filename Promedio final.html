@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promedio final</title>
+</head>
+<body>
+
+    <h2>Calculadora de Promedio final❕</h2>
+
+    <input type="number" id="cantidad" placeholder="Cantidad de notas">
+
+    <button onclick="calcular()">Calcular promedio</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+
+            let cantidad = Number(document.getElementById("cantidad").value);
+            let suma = 0;
+
+            for (let i = 1; i <= cantidad; i++) {
+
+                let nota = Number(prompt("Ingrese la nota " + i));
+
+                suma = suma + nota;
+            }
+
+            let promedio = suma / cantidad;
+
+            if (promedio >= 70) {
+
+                document.getElementById("resultado").innerHTML =
+                    "Promedio: " + promedio.toFixed(2) +
+                    "<br>Aprobado";
+
+            } else {
+
+                document.getElementById("resultado").innerHTML =
+                    "Promedio: " + promedio.toFixed(2) +
+                    "<br>Reprobado";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {
+    font-family: Arial;
+    background: #f4f1ea;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.contenedor {
+    background: white;
+    width: 380px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #bbb;
+}
+
+input {
+    padding: 10px;
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #607d8b;
+    color: white;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 17px;
+}
+</style>
+    <title>Descuento🛍️</title>
+</head>
+<body>
+
+    <h2>Calculo de Descuento</h2>
+
+    <input type="number" id="compra" placeholder="Monto de compra">
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let compra = Number(document.getElementById("compra").value);
+            let descuento = 0;
+            let total = compra;
+
+            if (compra > 100) {
+                descuento = compra * 0.10;
+                total = compra - descuento;
+            }
+
+            document.getElementById("resultado").innerHTML =
+                "Descuento: $" + descuento.toFixed(2) +
+                "<br>Total a pagar: $" + total.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
